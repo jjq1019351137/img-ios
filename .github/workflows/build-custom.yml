@@ -17,10 +17,11 @@ jobs:
   build-release:
     name: "Build and Release"
     runs-on: "ubuntu-22.04"
-
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: "Checking out git repository"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set executable permissions
         run: |
